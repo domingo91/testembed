@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Emdeb Tester</title>
+    <style>    
+        * {
+            box-sizing: border-box;
+            }
+        .content {
+          flex: 70%;
+          margin: 5% 20%;
+        }
+        
+        .link-input {
+          width: 100%;
+          padding: 20px;
+        }
+
+        .test-embed {
+            width: 100%; 
+            padding: 10px;
+        }
+
+        #Preview {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        </style>
+</head>
+<body>
+<!-- The flexible grid (content) -->
+    <div class="content">
+      <h2>Test Embed</h2>
+      <h3>Paste embed link and click "Test Embed"</h3>
+      <textarea class="link-input" id="videoLink" cols="40" rows="10"></textarea>
+      <button class="test-embed" onclick="myFunction()">Test Embed</button>
+      <h3>Click play to check video</h3>
+      <div id="Preview"></div>
+    </div>
+    <script>
+        function myFunction() {
+          document.getElementById("Preview").innerHTML = document.getElementById("videoLink").value;
+        }
+        </script>
+</body>
+</html>
